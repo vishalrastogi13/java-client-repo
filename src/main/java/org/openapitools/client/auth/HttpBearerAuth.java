@@ -13,12 +13,14 @@
 
 package org.openapitools.client.auth;
 
+import org.openapitools.client.ApiException;
 import org.openapitools.client.Pair;
 
+import java.net.URI;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-06T16:40:29.925+05:30[Asia/Kolkata]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-07T08:36:57.455532Z[Etc/UTC]")
 public class HttpBearerAuth implements Authentication {
   private final String scheme;
   private String bearerToken;
@@ -46,8 +48,9 @@ public class HttpBearerAuth implements Authentication {
   }
 
   @Override
-  public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams, Map<String, String> cookieParams) {
-    if(bearerToken == null) {
+  public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams, Map<String, String> cookieParams,
+                            String payload, String method, URI uri) throws ApiException {
+    if (bearerToken == null) {
       return;
     }
 

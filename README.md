@@ -2,7 +2,7 @@
 
 Swagger Petstore
 - API version: 1.0.6
-  - Build date: 2022-04-06T16:40:29.925+05:30[Asia/Kolkata]
+  - Build date: 2022-06-07T08:36:57.455532Z[Etc/UTC]
 
 This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.
 
@@ -13,8 +13,8 @@ This is a sample server Petstore server.  You can find out more about Swagger at
 ## Requirements
 
 Building the API client library requires:
-1. Java 1.7+
-2. Maven/Gradle
+1. Java 1.8+
+2. Maven (3.8.3+)/Gradle (7.2+)
 
 ## Installation
 
@@ -50,7 +50,14 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "org.openapitools:openapi-java-client:1.0.6"
+  repositories {
+    mavenCentral()     // Needed if the 'openapi-java-client' jar has been published to maven central.
+    mavenLocal()       // Needed if the 'openapi-java-client' jar has been published to the local maven repo.
+  }
+
+  dependencies {
+     implementation "org.openapitools:openapi-java-client:1.0.6"
+  }
 ```
 
 ### Others

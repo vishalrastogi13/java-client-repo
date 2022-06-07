@@ -1,4 +1,6 @@
+.github/workflows/maven.yml
 .gitignore
+.openapi-generator-ignore
 .travis.yml
 README.md
 api/openapi.yaml
@@ -46,6 +48,7 @@ src/main/java/org/openapitools/client/auth/OAuth.java
 src/main/java/org/openapitools/client/auth/OAuthFlow.java
 src/main/java/org/openapitools/client/auth/OAuthOkHttpClient.java
 src/main/java/org/openapitools/client/auth/RetryingOAuth.java
+src/main/java/org/openapitools/client/model/AbstractOpenApiSchema.java
 src/main/java/org/openapitools/client/model/Category.java
 src/main/java/org/openapitools/client/model/ModelApiResponse.java
 src/main/java/org/openapitools/client/model/Order.java
