@@ -20,7 +20,7 @@ jobs:
         id: tag_version
         uses: vishalrastogi13/tag-update-action-copy@main
         env:
-          GITHUB_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           custom_tag: ${{ steps.custom-tag.outputs.tag }}
 
   notify:
