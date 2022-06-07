@@ -1,10 +1,7 @@
 on:
   push:
-    # Sequence of patterns matched against refs/tags
-    tags:
-      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
-
-name: Create Release
+    branches:
+      - main
 
 jobs:
   build:
@@ -25,6 +22,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
           custom_tag: ${{ steps.custom-tag.outputs.tag }}
+
+  notify:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
