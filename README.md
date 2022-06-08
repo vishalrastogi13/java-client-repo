@@ -2,7 +2,7 @@
 
 Swagger Petstore
 - API version: 1.0.6
-  - Build date: 2022-06-08T08:59:05.357582Z[Etc/UTC]
+  - Build date: 2022-06-08T11:09:42.212922Z[Etc/UTC]
 
 This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.
 
